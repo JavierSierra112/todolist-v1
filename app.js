@@ -11,8 +11,8 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-
-mongoose.connect("mongodb+srv://admin-javier:jansel112@cluster0.6hlco.mongodb.net/todolistDB", {
+ const mongodbUrl="mongodb+srv://admin-javier:"+SECRET+"@cluster0.6hlco.mongodb.net/todolistDB";
+mongoose.connect(mongodbUrl, {
   useNewUrlParser: true,
 });
 
